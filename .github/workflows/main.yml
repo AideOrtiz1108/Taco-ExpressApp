@@ -47,3 +47,9 @@ jobs:
         with:
           name: TacoExpress-APK
           path: TacoExpress.apk
+
+      - name: Construir imagen Docker
+        run: docker build -t tacoexpress:latest .
+
+      - name: Verificar imagen Docker
+        run: docker images
