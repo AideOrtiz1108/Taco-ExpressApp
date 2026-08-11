@@ -24,6 +24,9 @@ jobs:
         with:
           channel: stable
 
+      - name: Crear archivos Android
+        run: flutter create --platforms=android .
+
       - name: Instalar dependencias
         run: flutter pub get
 
@@ -32,3 +35,15 @@ jobs:
 
       - name: Ejecutar pruebas
         run: flutter test
+
+      - name: Generar APK
+        run: flutter build apk --release
+
+      - name: Renombrar APK
+        run: cp build/app/outputs/flutter-apk/app-release.apk TacoExpress.apk
+
+      - name: Guardar APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: TacoExpress-APK
+          path: TacoExpress.apk
