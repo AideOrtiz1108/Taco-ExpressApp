@@ -32,6 +32,3 @@ jobs:
 
       - name: Ejecutar pruebas
         run: flutter test
-
-      - name: Generar APK
-        run: flutter build apk --release
