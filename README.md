@@ -1,17 +1,40 @@
-# flutter_application_1
+# 🌮 TacoExpress
 
-A new Flutter project.
+TacoExpress es una aplicación desarrollada en Flutter para simular el proceso de selección y compra de productos de una taquería.
 
-## Getting Started
+## 📱 Funcionalidades
 
-This project is a starting point for a Flutter application.
+- Pantalla de inicio.
+- Visualización del menú de tacos.
+- Agregar productos al carrito.
+- Visualizar los productos agregados.
+- Aumentar y disminuir la cantidad de productos.
+- Cálculo automático de subtotales.
+- Cálculo del total del pedido.
+- Eliminación de productos al disminuir su cantidad a cero.
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Tecnologías utilizadas
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Flutter
+- Dart
+- GitHub
+- GitHub Actions
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🌿 Ramas del proyecto
+
+- `main`: versión estable del proyecto.
+- `develop`: integración de las funcionalidades.
+- `feature/menu-carrito`: desarrollo del módulo de menú y carrito.
+
+## 🔄 Flujo del módulo
+
+Inicio → Menú → Agregar producto → Carrito → Modificar cantidades → Total
+
+## 👥 Participantes
+
+- Lizbeth Aide Ortiz Rodriguez
+- Eduardo Alfonso Rodriguez Mendoza
+
+## 📚 Materia
+
+Gestión de Desarrollo del Proceso de Software
