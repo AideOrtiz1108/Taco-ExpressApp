@@ -523,8 +523,277 @@ class _CartPageState extends State<CartPage> {
                     ],
                   ),
                 ),
+
+                const SizedBox(height: 20),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton.icon(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const SeguimientoPedidoPage(),
+                          ),
+                        );
+                      },
+                      icon: const Icon(Icons.delivery_dining),
+                      label: const Text(
+                        'Realizar pedido',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.orange,
+                        foregroundColor: Colors.white,
+                        padding: const EdgeInsets.symmetric(vertical: 16),
+                      ),
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 20),
               ],
             ),
+    );
+  }
+}
+// ==================== SEGUIMIENTO DEL PEDIDO ====================
+
+class SeguimientoPedidoPage extends StatelessWidget {
+  const SeguimientoPedidoPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.orange.shade50,
+
+      appBar: AppBar(
+        title: const Text(
+          'Seguimiento del pedido',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Colors.orange,
+        foregroundColor: Colors.white,
+      ),
+
+      body: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Center(
+              child: Icon(
+                Icons.delivery_dining,
+                size: 90,
+                color: Colors.orange,
+              ),
+            ),
+
+            const SizedBox(height: 15),
+
+            const Center(
+              child: Text(
+                '¡Tu pedido está en proceso!',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 10),
+
+            const Center(
+              child: Text(
+                'Pedido #TE001',
+                style: TextStyle(
+                  fontSize: 17,
+                  color: Colors.black54,
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 40),
+
+            // PASO 1
+            const Row(
+              children: [
+                CircleAvatar(
+                  backgroundColor: Colors.green,
+                  child: Icon(
+                    Icons.check,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(width: 15),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Pedido recibido',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'Tu pedido fue recibido correctamente.',
+                        style: TextStyle(
+                          color: Colors.black54,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+
+            const Padding(
+              padding: EdgeInsets.only(left: 19),
+              child: SizedBox(
+                height: 35,
+                child: VerticalDivider(
+                  thickness: 2,
+                  color: Colors.green,
+                ),
+              ),
+            ),
+
+            // PASO 2
+            const Row(
+              children: [
+                CircleAvatar(
+                  backgroundColor: Colors.orange,
+                  child: Icon(
+                    Icons.restaurant,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(width: 15),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Preparando tu pedido',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'Estamos preparando tus tacos.',
+                        style: TextStyle(
+                          color: Colors.black54,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+
+            const Padding(
+              padding: EdgeInsets.only(left: 19),
+              child: SizedBox(
+                height: 35,
+                child: VerticalDivider(
+                  thickness: 2,
+                  color: Colors.grey,
+                ),
+              ),
+            ),
+
+            // PASO 3
+            const Row(
+              children: [
+                CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Icon(
+                    Icons.delivery_dining,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(width: 15),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'En camino',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'Tu pedido saldrá pronto a entrega.',
+                        style: TextStyle(
+                          color: Colors.black54,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+
+            const Padding(
+              padding: EdgeInsets.only(left: 19),
+              child: SizedBox(
+                height: 35,
+                child: VerticalDivider(
+                  thickness: 2,
+                  color: Colors.grey,
+                ),
+              ),
+            ),
+
+            // PASO 4
+            const Row(
+              children: [
+                CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Icon(
+                    Icons.home,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(width: 15),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Entregado',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'Pedido entregado en tu domicilio.',
+                        style: TextStyle(
+                          color: Colors.black54,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
